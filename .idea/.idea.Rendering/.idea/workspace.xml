@@ -13,9 +13,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShaderUtilities.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://E:/Test/PaddleSquareTest/Assets/Shaders/My Lighting.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityMetaPass.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/13.Deferred Shading/My Lighting7.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/HLSLSupport.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardConfig.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardUtils.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Lyw0zyruwMG09yjL8K2PnH4i6Q" />
   <component name="ProjectViewState">
@@ -67,6 +71,14 @@
       <workItem from="1677139704211" duration="2379000" />
       <workItem from="1677202729338" duration="3163000" />
       <workItem from="1677207010098" duration="10030000" />
+      <workItem from="1677460186769" duration="15489000" />
+      <workItem from="1677546128817" duration="9152000" />
+      <workItem from="1677562014296" duration="9418000" />
+      <workItem from="1677632676440" duration="11127000" />
+      <workItem from="1677718669787" duration="17834000" />
+      <workItem from="1677804863081" duration="10814000" />
+      <workItem from="1677824875595" duration="1469000" />
+      <workItem from="1677827547973" duration="1030000" />
     </task>
     <servers />
   </component>
