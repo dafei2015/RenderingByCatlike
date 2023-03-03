@@ -96,5 +96,5 @@ Shader "Custom/My Complex Shader"
         
     }
     
-    CustomEditor "CustomShaderGUI"
+//    CustomEditor "CustomShaderGUI"
 }

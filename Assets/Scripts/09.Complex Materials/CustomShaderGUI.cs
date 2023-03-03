@@ -2,6 +2,7 @@
 
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 #endregion
 
@@ -14,12 +15,66 @@ public class CustomShaderGUI : ShaderGUI
         Metallic
     }
 
+    enum RenderingMode
+    {
+        Opaque,
+        Cutout,
+        Fade,
+        Transparent
+    }
+
+    struct RenderingSettings
+    {
+        public RenderQueue queue;
+        public string renderType;
+        public BlendMode srcBlend, dstBlend;
+        public bool zWrite;
+
+        public static RenderingSettings[] modes =
+        {
+            new RenderingSettings
+            {
+                queue = RenderQueue.Geometry, 
+                renderType = "", 
+                srcBlend = BlendMode.One, 
+                dstBlend = BlendMode.Zero,
+                zWrite = true
+            },
+            new RenderingSettings
+            {
+                queue = RenderQueue.AlphaTest, 
+                renderType = "TransparentCutout", 
+                srcBlend = BlendMode.One, 
+                dstBlend = BlendMode.Zero,
+                zWrite = true
+            },
+            new RenderingSettings
+            {
+                queue = RenderQueue.Transparent,
+                renderType = "Transparent", 
+                srcBlend = BlendMode.SrcAlpha, 
+                dstBlend = BlendMode.OneMinusSrcAlpha,
+                zWrite = false
+            },
+            new RenderingSettings
+            {
+                queue = RenderQueue.Transparent,
+                renderType = "Transparent", 
+                srcBlend = BlendMode.One, 
+                dstBlend = BlendMode.OneMinusSrcAlpha,
+                zWrite = false
+            },
+        };
+    }
+
     Material _target;
     MaterialEditor _editor;
     MaterialProperty[] _properties;
     static GUIContent _staticLabel = new GUIContent();
 
-    SmoothnessSource _source;
+    private SmoothnessSource _source;
+    RenderingMode _mode;
+    bool _shouldShowAlphaCutoff;
 
     public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
     {
@@ -27,8 +82,62 @@ public class CustomShaderGUI : ShaderGUI
         _editor = materialEditor;
         _properties = properties;
 
+        DoRenderingMode();
         DOMain();
         DoSecondary();
+    }
+
+    private void DoRenderingMode()
+    {
+        if (IsKeywordEnabled("_RENDERING_CUTOUT"))
+        {
+            _shouldShowAlphaCutoff = true;
+            _mode = RenderingMode.Cutout;
+        }
+        else if (IsKeywordEnabled("_RENDERING_FADE"))
+        {
+            _mode = RenderingMode.Fade;
+        }else if (IsKeywordEnabled("_RENDERING_TRANSPARENT")) {
+            _mode = RenderingMode.Transparent;
+        }
+
+        EditorGUI.BeginChangeCheck();
+        _mode = (RenderingMode)EditorGUILayout.EnumPopup(MakeLabel("Rendering Mode"), _mode);
+        if (EditorGUI.EndChangeCheck())
+        {
+            _shouldShowAlphaCutoff = _mode == RenderingMode.Cutout;
+            RecordAction("Rendering Mode");
+            SetKeyword("_RENDERING_CUTOUT", _mode == RenderingMode.Cutout);
+            SetKeyword("_RENDERING_FADE", _mode == RenderingMode.Fade);
+            SetKeyword("_RENDERING_TRANSPARENT", _mode == RenderingMode.Transparent);
+
+            RenderingSettings settings = RenderingSettings.modes[(int)_mode];
+            foreach (Material m in _editor.targets)
+            {
+                m.renderQueue = (int)settings.queue;
+                m.SetOverrideTag("RenderType", settings.renderType);
+                m.SetInt("_SrcBlend", (int)settings.srcBlend);
+                m.SetInt("_DstBlend", (int)settings.dstBlend);
+                m.SetInt("_ZWrite",  settings.zWrite ? 1 : 0);
+            }
+        }
+        
+        if (_mode == RenderingMode.Fade || _mode == RenderingMode.Transparent) {
+            DoSemitransparentShadows();
+        }
+    }
+    
+    private void DoSemitransparentShadows () 
+    {
+        EditorGUI.BeginChangeCheck();
+        bool semitransparentShadows = EditorGUILayout.Toggle(MakeLabel("Semitransp.Shadows","Semitransparent Shadows"),IsKeywordEnabled("_SEMITRANSPARENT_SHADOWS"));
+        if(EditorGUI.EndChangeCheck())
+        {
+            SetKeyword("_SEMITRANSPARENT_SHADOWS",semitransparentShadows);
+            _shouldShowAlphaCutoff = !semitransparentShadows;
+            
+        }
+       
     }
 
 
@@ -41,13 +150,26 @@ public class CustomShaderGUI : ShaderGUI
         MaterialProperty mainTex = FindProperty("_MainTex");
         MaterialProperty tint = FindProperty("_Tint");
         _editor.TexturePropertySingleLine(MakeLabel(mainTex, "Albedo (RGB)"), mainTex, tint);
+
+        if (_shouldShowAlphaCutoff)
+            DoAlphaCutoff();
         DoMetallic();
         DoSmoothness();
         DoNormals();
         DoOcclusion();
         DoEmission();
         DoDetailMask();
+
         _editor.TextureScaleOffsetProperty(mainTex);
+    }
+
+    private void DoAlphaCutoff()
+    {
+        
+        MaterialProperty slider = FindProperty("_AlphaCutoff");
+        EditorGUI.indentLevel += 2;
+        _editor.ShaderProperty(slider, MakeLabel(slider));
+        EditorGUI.indentLevel -= 2;
     }
 
 
@@ -154,7 +276,7 @@ public class CustomShaderGUI : ShaderGUI
         Texture tex = map.textureValue;
         EditorGUI.BeginChangeCheck();
         _editor.TexturePropertySingleLine(MakeLabel(map), map, tex ? FindProperty("_DetailBumpScale") : null);
-        if (EditorGUI.EndChangeCheck()&& tex != map.textureValue)
+        if (EditorGUI.EndChangeCheck() && tex != map.textureValue)
         {
             SetKeyword("_DETAIL_NORMAL_MAP", map.textureValue);
         }
@@ -189,7 +311,6 @@ public class CustomShaderGUI : ShaderGUI
             {
                 target.EnableKeyword(keyword);
             }
-           
         }
         else
         {

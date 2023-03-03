@@ -69,7 +69,7 @@ float GetMetallic(Interpolators i)
     #endif
 }
 
-float GeSmoothness(Interpolators i)
+float GetSmoothness(Interpolators i)
 {
     float smoothness = 1;
     #if defined(_SMOOTHNESS_ALBEDO)
@@ -218,7 +218,7 @@ UnityIndirect CreatIndirectLight(Interpolators i,float3 viewDir)
     // float4 envSample = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0,relectionDir,roughness*UNITY_SPECCUBE_LOD_STEPS);
     // indirectLight.specular = DecodeHDR(envSample,unity_SpecCube0_HDR);
     Unity_GlossyEnvironmentData envData;
-    envData.roughness = 1-GeSmoothness(i);
+    envData.roughness = 1-GetSmoothness(i);
     envData.reflUVW = BoxProjection(
             reflectionDir, i.worldPos,
             unity_SpecCube0_ProbePosition,
@@ -339,7 +339,7 @@ float4 MyFragmentProgram(Interpolators i):SV_TARGET
 
     float4 color = UNITY_BRDF_PBS(
         albedo, specularTint,
-        oneMinusReflectivity, GeSmoothness(i),
+        oneMinusReflectivity, GetSmoothness(i),
         i.normal, viewDir, unity_light, unity_indirect);
 
     color.rgb += GetEmission(i);
