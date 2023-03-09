@@ -38,7 +38,7 @@ Shader "Custom/My Reflection Shader"
             #pragma vertex MyVertexProgram
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
-            #include "My Lighting3.cginc"
+            #include "My Lighting8.cginc"
             
             ENDCG
         }
@@ -58,7 +58,7 @@ Shader "Custom/My Reflection Shader"
             #pragma fragment MyFragmentProgram
 
             // #define POINT;
-            #include "My Lighting3.cginc"
+            #include "My Lighting8.cginc"
             
             ENDCG
         }
@@ -76,7 +76,7 @@ Shader "Custom/My Reflection Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "../07.Shadows/My Shadows.cginc"
+            #include "../07.Shadows/My Shadows7.cginc"
             
             ENDCG
         }

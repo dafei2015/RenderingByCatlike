@@ -75,7 +75,7 @@ Shader "Custom/My Fog Shader"
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
              //#include "My Lighting3.cginc"
-            #include "My Lighting8.cginc"
+            #include "My Lighting14.cginc"
             
             ENDCG
         }
@@ -105,7 +105,7 @@ Shader "Custom/My Fog Shader"
             #pragma fragment MyFragmentProgram
 
             // #define POINT;
-            #include "My Lighting8.cginc"
+            #include "My Lighting14.cginc"
             
             ENDCG
         }
@@ -140,7 +140,7 @@ Shader "Custom/My Fog Shader"
 
             #define DEFERRED_PASS
 
-            #include "My Lighting8.cginc"
+            #include "My Lighting14.cginc"
 
             ENDCG
         }
@@ -163,12 +163,12 @@ Shader "Custom/My Fog Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "../12.Semitransparent Shadows/My Shadows2.cginc"
+            #include "../12.Semitransparent Shadows/My Shadows12.cginc"
             
             ENDCG
         }
         
     }
     
-    CustomEditor "CustomShaderGUI"
+    CustomEditor "CustomShaderGUI10"
 }

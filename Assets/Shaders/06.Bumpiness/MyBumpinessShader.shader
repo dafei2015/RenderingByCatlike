@@ -37,7 +37,7 @@ Shader "Custom/My Bumpiness Shader"
             #pragma vertex MyVertexProgram
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
-            #include "My Lighting1.cginc"
+            #include "My Lighting6.cginc"
             
             ENDCG
         }
@@ -57,7 +57,7 @@ Shader "Custom/My Bumpiness Shader"
             #pragma fragment MyFragmentProgram
 
             // #define POINT;
-            #include "My Lighting1.cginc"
+            #include "My Lighting6.cginc"
             
             ENDCG
         }

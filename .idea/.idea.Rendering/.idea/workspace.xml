@@ -11,15 +11,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/20.Parallax/My Lighting20.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShaderUtilities.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/HLSLSupport.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardUtils.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://E:/Test/PaddleSquareTest/Assets/Shaders/My Lighting.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityMetaPass.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shaders/13.Deferred Shading/My Lighting7.cginc" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/HLSLSupport.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Person/Catlikecoding/Rendering/Rendering/Assets/Shaders/20.Parallax/My Lighting20.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://E:/Test/PaddleSquareTest/Assets/Scripts/Editor/MyLightingShaderGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://H:/Person/Catlikecoding/Rendering/Rendering/Assets/Shaders/20.Parallax/MyParallaxShader.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardConfig.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardUtils.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Lyw0zyruwMG09yjL8K2PnH4i6Q" />
   <component name="ProjectViewState">
@@ -79,6 +83,12 @@
       <workItem from="1677804863081" duration="10814000" />
       <workItem from="1677824875595" duration="1469000" />
       <workItem from="1677827547973" duration="1030000" />
+      <workItem from="1678070144456" duration="10362000" />
+      <workItem from="1678151990934" duration="7381000" />
+      <workItem from="1678175065868" duration="1754000" />
+      <workItem from="1678238315266" duration="9229000" />
+      <workItem from="1678326468839" duration="5211000" />
+      <workItem from="1678333619678" duration="3545000" />
     </task>
     <servers />
   </component>

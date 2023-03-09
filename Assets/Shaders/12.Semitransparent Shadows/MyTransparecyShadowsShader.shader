@@ -73,7 +73,7 @@ Shader "Custom/My Transparecy Shadows Shader"
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
              //#include "My Lighting3.cginc"
-            #include "../11.Transparency/My Lighting6.cginc"
+            #include "../11.Transparency/My Lighting11.cginc"
             
             ENDCG
         }
@@ -103,7 +103,7 @@ Shader "Custom/My Transparecy Shadows Shader"
 
             // #define POINT;
             //#include "My Lighting3.cginc"
-             #include "../11.Transparency/My Lighting6.cginc"
+             #include "../11.Transparency/My Lighting11.cginc"
             
             ENDCG
         }
@@ -125,12 +125,12 @@ Shader "Custom/My Transparecy Shadows Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "My Shadows2.cginc"
+            #include "My Shadows12.cginc"
             
             ENDCG
         }
         
     }
     
-    CustomEditor "CustomShaderGUI"
+    CustomEditor "CustomShaderGUI10"
 }
