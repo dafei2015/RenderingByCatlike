@@ -82,7 +82,7 @@ Shader "Custom/My Static Lighting Shader"
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
              //#include "My Lighting3.cginc"
-            #include "My Lighting9.cginc"
+            #include "My Lighting16.cginc"
             
             ENDCG
         }
@@ -112,7 +112,7 @@ Shader "Custom/My Static Lighting Shader"
             #pragma fragment MyFragmentProgram
 
             // #define POINT;
-            #include "My Lighting9.cginc"
+            #include "My Lighting16.cginc"
             
             ENDCG
         }
@@ -149,7 +149,7 @@ Shader "Custom/My Static Lighting Shader"
 
             #define DEFERRED_PASS
 
-            #include "My Lighting9.cginc"
+            #include "My Lighting16.cginc"
 
             ENDCG
         }
@@ -172,7 +172,7 @@ Shader "Custom/My Static Lighting Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "My Shadows3.cginc"
+            #include "My Shadows16.cginc"
             
             ENDCG
         }
@@ -194,12 +194,12 @@ Shader "Custom/My Static Lighting Shader"
 			#pragma shader_feature _DETAIL_MASK
 			#pragma shader_feature _DETAIL_ALBEDO_MAP
             // #define POINT;
-            #include "My Lightmapping.cginc"
+            #include "My Lightmapping16.cginc"
             
             ENDCG
         }
         
     }
     
-    CustomEditor "CustomShaderGUI1"
+    CustomEditor "CustomShaderGUI16"
 }

@@ -64,7 +64,7 @@ Shader "Custom/My More Complexity Shader"
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
              //#include "My Lighting3.cginc"
-            #include "My Lighting5.cginc"
+            #include "My Lighting10.cginc"
             
             ENDCG
         }
@@ -93,7 +93,7 @@ Shader "Custom/My More Complexity Shader"
 
             // #define POINT;
             //#include "My Lighting3.cginc"
-             #include "My Lighting5.cginc"
+             #include "My Lighting10.cginc"
             
             ENDCG
         }
@@ -111,12 +111,12 @@ Shader "Custom/My More Complexity Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "../07.Shadows/My Shadows.cginc"
+            #include "../07.Shadows/My Shadows7.cginc"
             
             ENDCG
         }
         
     }
     
-    CustomEditor "CustomShaderGUI"
+    CustomEditor "CustomShaderGUI10"
 }

@@ -38,7 +38,7 @@ Shader "Custom/My Shadows Shader"
             #pragma vertex MyVertexProgram
             #pragma fragment MyFragmentProgram
             #define FORWARD_BASE_PASS
-            #include "My Lighting2.cginc"
+            #include "My Lighting7.cginc"
             
             ENDCG
         }
@@ -58,7 +58,7 @@ Shader "Custom/My Shadows Shader"
             #pragma fragment MyFragmentProgram
 
             // #define POINT;
-            #include "My Lighting2.cginc"
+            #include "My Lighting7.cginc"
             
             ENDCG
         }
@@ -76,7 +76,7 @@ Shader "Custom/My Shadows Shader"
             #pragma fragment MyShadowFragmentProgram
             
             // #define POINT;
-            #include "My Shadows.cginc"
+            #include "My Shadows7.cginc"
             
             ENDCG
         }
