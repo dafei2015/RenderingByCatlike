@@ -11,6 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/21.Flat and Wireframe Shading/My Lighting Input21.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/20.Parallax/My Lighting20.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShaderUtilities.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
@@ -20,9 +21,7 @@
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://E:/Test/PaddleSquareTest/Assets/Shaders/My Lighting.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityMetaPass.cginc" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://H:/Person/Catlikecoding/Rendering/Rendering/Assets/Shaders/20.Parallax/My Lighting20.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://E:/Test/PaddleSquareTest/Assets/Scripts/Editor/MyLightingShaderGUI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://H:/Person/Catlikecoding/Rendering/Rendering/Assets/Shaders/20.Parallax/MyParallaxShader.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardConfig.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Lyw0zyruwMG09yjL8K2PnH4i6Q" />
@@ -89,6 +88,7 @@
       <workItem from="1678238315266" duration="9229000" />
       <workItem from="1678326468839" duration="5211000" />
       <workItem from="1678333619678" duration="3545000" />
+      <workItem from="1678410118895" duration="13094000" />
     </task>
     <servers />
   </component>
