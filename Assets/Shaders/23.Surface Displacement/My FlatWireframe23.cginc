@@ -1,9 +1,9 @@
-#if !defined(FLAT_WIREFRAME_INCLUDED)
-#define FLAT_WIREFRAME_INCLUDED
+#if !defined(FLAT_WIREFRAME23_INCLUDED)
+#define FLAT_WIREFRAME23_INCLUDED
 
 #define CUSTOM_GEOMETRY_INTERPOLATORS float2 barycentricCoordinates : TEXCOORD9;
 
-#include "My Lighting Input21.cginc"
+#include "My Lighting Input23.cginc"
 
 float3 _WireframeColor;
 float _WireframeSmoothing;
@@ -24,7 +24,7 @@ float3 GetAlbedoWithWireframe( Interpolators i)
 }
 #define ALBEDO_FUNCTION GetAlbedoWithWireframe
 
-#include "My Lighting21.cginc"
+#include "My Lighting23.cginc"
 
 struct InterpolatorsGeometry
 {

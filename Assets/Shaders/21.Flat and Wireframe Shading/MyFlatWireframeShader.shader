@@ -99,7 +99,7 @@ Shader "Custom/My Flat Wireframe Shader"
             #pragma geometry MyGeometryProgram
             #define FORWARD_BASE_PASS
              //#include "My Lighting3.cginc"
-            #include "My FlatWireframe.cginc"
+            #include "My FlatWireframe21.cginc"
             
             ENDCG
         }
@@ -133,7 +133,7 @@ Shader "Custom/My Flat Wireframe Shader"
             #pragma geometry MyGeometryProgram
 
             // #define POINT;
-            #include "My FlatWireframe.cginc"
+            #include "My FlatWireframe21.cginc"
             
             ENDCG
         }
@@ -175,7 +175,7 @@ Shader "Custom/My Flat Wireframe Shader"
 
             #define DEFERRED_PASS
 
-            #include "My FlatWireframe.cginc"
+            #include "My FlatWireframe21.cginc"
 
             ENDCG
         }

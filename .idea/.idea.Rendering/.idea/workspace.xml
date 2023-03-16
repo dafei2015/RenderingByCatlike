@@ -16,12 +16,14 @@
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShaderUtilities.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/AutoLight.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityShadowLibrary.cginc" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://E:/Test/PaddleSquareTest/Assets/Scripts/DepthOfFieldEffect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/HLSLSupport.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardUtils.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://E:/Test/PaddleSquareTest/Assets/Shaders/My Lighting.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityMetaPass.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://E:/Test/PaddleSquareTest/Assets/Scripts/Editor/MyLightingShaderGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84671a952f0e4d8faf2c6c964d63b7e416e200/67/b7d496bd/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Program Files/Unity 2022.2.5f1c1/Editor/Data/CGIncludes/UnityStandardConfig.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2Lyw0zyruwMG09yjL8K2PnH4i6Q" />
@@ -89,6 +91,10 @@
       <workItem from="1678326468839" duration="5211000" />
       <workItem from="1678333619678" duration="3545000" />
       <workItem from="1678410118895" duration="13094000" />
+      <workItem from="1678669882613" duration="17555000" />
+      <workItem from="1678755869183" duration="16552000" />
+      <workItem from="1678841750448" duration="18807000" />
+      <workItem from="1678928179628" duration="13470000" />
     </task>
     <servers />
   </component>
